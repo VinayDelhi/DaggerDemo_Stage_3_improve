@@ -21,8 +21,6 @@ public class MyApplication extends Application {
     @Inject
     public NetworkService networkService;
 
-    @Inject
-    public NetworkService networkService2;
 
     @Override
     public void onCreate() {

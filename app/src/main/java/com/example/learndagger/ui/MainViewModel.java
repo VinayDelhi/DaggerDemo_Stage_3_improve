@@ -3,9 +3,11 @@ package com.example.learndagger.ui;
 
 import com.example.learndagger.data.local.DatabaseService;
 import com.example.learndagger.data.remote.NetworkService;
+import com.example.learndagger.di.Scope.ActivityScop;
 
 import javax.inject.Inject;
 
+@ActivityScop
 public class MainViewModel {
 
     private DatabaseService databaseService;

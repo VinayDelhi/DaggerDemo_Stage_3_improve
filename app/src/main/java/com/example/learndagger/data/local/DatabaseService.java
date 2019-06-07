@@ -2,6 +2,7 @@ package com.example.learndagger.data.local;
 
 import android.content.Context;
 
+import com.example.learndagger.di.qualifier.ApplicationContext;
 import com.example.learndagger.di.qualifier.DatabaseInfo;
 
 import javax.inject.Inject;
@@ -19,7 +20,9 @@ public class DatabaseService {
     private int version;
 
     @Inject
-    public DatabaseService(Context context, @DatabaseInfo String databaseName, int version) {
+    public DatabaseService(@ApplicationContext Context context,
+                           @DatabaseInfo String databaseName,
+                           @DatabaseInfo Integer version) {
         // do the initialisation here
         this.context = context;
         this.databaseName = databaseName;

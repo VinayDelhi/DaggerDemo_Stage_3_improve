@@ -5,6 +5,7 @@ import android.content.Context;
 
 import com.example.learndagger.data.local.DatabaseService;
 import com.example.learndagger.data.remote.NetworkService;
+import com.example.learndagger.di.qualifier.ActivityContext;
 import com.example.learndagger.ui.MainViewModel;
 
 import dagger.Module;
@@ -19,6 +20,7 @@ public class ActivityModule {
         this.activity = activity;
     }
 
+    @ActivityContext
     @Provides
     Context provideContext(){
 

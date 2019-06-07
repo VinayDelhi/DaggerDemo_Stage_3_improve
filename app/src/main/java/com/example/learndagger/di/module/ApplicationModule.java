@@ -6,6 +6,7 @@ import android.content.Intent;
 import com.example.learndagger.MyApplication;
 import com.example.learndagger.data.local.DatabaseService;
 import com.example.learndagger.data.remote.NetworkService;
+import com.example.learndagger.di.qualifier.ApplicationContext;
 import com.example.learndagger.di.qualifier.DatabaseInfo;
 import com.example.learndagger.di.qualifier.NetworkInfo;
 
@@ -23,6 +24,7 @@ public class ApplicationModule {
         this.myApplication = myApplication;
     }
 
+    @ApplicationContext
     @Provides
     Context provideContext(){
 
@@ -36,6 +38,7 @@ public class ApplicationModule {
         return "abc";
     }
 
+    @DatabaseInfo
     @Provides
     Integer provideDatabaseVersion(){
 

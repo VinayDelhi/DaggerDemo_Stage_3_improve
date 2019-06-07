@@ -2,6 +2,7 @@ package com.example.learndagger.data.remote;
 
 import android.content.Context;
 
+import com.example.learndagger.di.qualifier.ApplicationContext;
 import com.example.learndagger.di.qualifier.NetworkInfo;
 
 import javax.inject.Inject;
@@ -18,7 +19,8 @@ public class NetworkService {
     private String apiKey;
 
     @Inject
-    public NetworkService(Context context, @NetworkInfo String apiKey) {
+    public NetworkService(@ApplicationContext Context context,
+                          @NetworkInfo String apiKey) {
         // do the initialisation here
         this.context = context;
         this.apiKey = apiKey;
